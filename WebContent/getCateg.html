@@ -1,0 +1,23 @@
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 50px;
+    cell-spacing:2px;
+}
+</style>
+<div id="categories"><br>
+<br><br><br><br><br><br><br><br>
+ <table style="cellspacing:20;align:left">
+  <tr>
+    <td  ng-repeat="product in products">
+    <figure ng-click="viewAds(product)" ng-model=prod>
+    	<img src="1.png" alt="MissingImage" width="250" height="180">
+  		<figcaption style="text-align:center; margin-right:10px">{{product.name}}</figcaption>
+		</figure>
+    </td>
+  </tr>
+ 
+</table>
+
+</div>

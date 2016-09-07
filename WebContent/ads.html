@@ -1,0 +1,66 @@
+<style>
+table {
+    width: 70%;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
+    
+}
+th, td {
+    padding: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #00796B;
+    color: white;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #00796B;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+<br><br>
+<select ng-model="selected" ng-options="prod as opt for opt in orders" ng-change="sortProducts(adsList[0].category,prod)" style="float:right; margin-right:100px; margin-top:50px">
+  
+</select>
+
+<br><br><br>
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Owner Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    
+  </tr>
+<tr ng-repeat="product in adsList">
+		
+		<td><img src={{product.photo1}} height="75",width="75"></td>
+		<td>{{ product.name }}</td>
+		<td>{{ product.title }}</td>
+		<td>{{ product.description }}</td>
+		<td>{{ product.userId }}</td>
+		<td>{{ product.category }}</td>
+		<td>{{ product.price}}</td>
+		<td><input type="button" value="Contact Owner" ng-click="contact()"></td>
+		<td><input type="button" value="Details" ng-click="details(product.id)"></td>
+		
+		</tr>
+</table>
+
+
